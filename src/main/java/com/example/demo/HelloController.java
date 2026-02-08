@@ -10,4 +10,10 @@ public class HelloController {
     public String hello() {
         return "hello java";
     }
+
+    @GetMapping("/time")
+    public String time() {
+        return java.time.LocalTime.now().toString();
+    }
+
 }

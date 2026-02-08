@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Java App</title>
+</head>
+<body>
+
+    <h2>Test Module1</h2>
+
+    <button onclick="callBackend()">Press</button>
+
+    <p id="result"></p>
+
+    <script>
+        function callBackend() {
+            fetch("/hello")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("result").innerText = data;
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+        }
+    </script>
+
+</body>
+</html>
