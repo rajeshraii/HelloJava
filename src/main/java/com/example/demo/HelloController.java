@@ -11,9 +11,9 @@ public class HelloController {
         return "hello java";
     }
 
-    @GetMapping("/time")
-    public String time() {
-        return java.time.LocalTime.now().toString();
+    @GetMapping("/text")
+    public String text() {
+        return "welcome to java programming";
     }
 
 }

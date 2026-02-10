@@ -9,8 +9,10 @@
     <h2>Test Module1</h2>
 
     <button onclick="callBackend()">Press</button>
+    <button onclick="callBackend1()">Text</button>
 
     <p id="result"></p>
+    <p id="res"></p>
 
     <script>
         function callBackend() {
@@ -22,6 +24,17 @@
                 .catch(error => {
                     console.error("Error:", error);
                 });
+
+        function callBackend1() {
+            fetch("/text")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("res").innerText = data;
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+            }
         }
     </script>
 
