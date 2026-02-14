@@ -9,7 +9,7 @@
     <h2>Test Module1</h2>
 
     <button onclick="callBackend()">Press</button>
-    <button onclick="callBackend1()">Text</button>
+    <button onclick="callText()">Text</button>
 
     <p id="result"></p>
 
@@ -24,7 +24,7 @@
                     console.error("Error:", error);
                 });
 
-        function callBackend() {
+        function callText() {
             fetch("/text")
                 .then(response => response.text())
                 .then(data => {
